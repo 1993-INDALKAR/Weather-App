@@ -1,0 +1,12 @@
+body,html{
+    font-family:'lato';
+    color: #111;
+    position:relative;
+    overflow-x:hidden;
+    height:100%;
+    width: 100%;
+    background-size:     cover;       
+    background-position: center center;  
+    background-repeat: no-repeat;
+    background-image: url("http://www.modafinilsale.com/data/out/555/233146834-weather-channel-wallpaper.jpeg")
+}
