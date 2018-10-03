@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="http://www.lakeparkcampground.com/images/weather_icon.png" type="image/png">
+    
+    <link href="./weather_app.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900" rel="stylesheet" type="text/css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" rel="stylesheet" type="text/css">
+
+    <script src="./WEATHER_APP.js"></script>
+</HEAD>
+<BODY onload="geologicalCordinate()">
+    
+   <header>
+       <div class="container text-center">
+
+          <h1> Weather <i class="wi" id="iconRand"></i> App </h1>
+          <br>
+          <div>
+              <button class="btn" onclick="changeTempType()"><h3 id="temp">Temperature</h3></button>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-lg-3 col-md-2 col-sm-12"></div>
+              <div class="col-lg-6 col-md-8 col-sm-12">
+                  <div class="row">
+                      <div class="col-sm-12 col-lg-4"><h3 id="name">Region</h3></div>
+                      <div class="col-sm-12 col-lg-4"><h3 id="description">Description</h3></div>
+                      <div class="col-sm-12 col-lg-4"><h3 id="wind">Wind</h3></div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-2"></div>
+          </div>
+       </div>
+   </header>
+
+   <!--weather by city-->
+   <section class="dynamicCity">
+       <div class="container text-center">
+           <h2 class="dynCityHead">Select City for Weather Condition</h2>
+           <br>
+           <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-12"></div>
+            <div class="col-lg-6 col-md-8 col-sm-12 form-group">
+                    <select class="form-control" id="selectCity" name="city" >  
+                    </select>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="citySelected()">Submit</button>
+            </div>
+            <div class="col-lg-3 col-md-2"></div>
+        </div>
+       </div>
+   </section>
+   <!--end weather by city-->
+
+    
+
+    <script language="javascript">
+            populateCities("selectCity");
+        </script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+
+</BODY>
+</HTML>
